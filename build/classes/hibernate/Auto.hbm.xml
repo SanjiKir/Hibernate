@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="hibernate.Auto" table="AUTO">
+    <id column="autoId" name="autoId" type="long">
+      <generator class="native"/>
+    </id>
+    <property column="NAZEV" length="255" name="nazev" not-null="true" type="string" update="true"/>
+    <many-to-one name="majitel" column="MAJITEL_ID" class="hibernate.Majitel"/>
+  </class>
+</hibernate-mapping>

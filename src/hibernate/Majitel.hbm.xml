@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="hibernate.Majitel" table="MAJITEL">
+        <id column="MAJITEL_ID" name="idMajitel" type="long">
+            <generator class="native"/>
+        </id>
+        <property column="FIRSTNAME" length="255" name="firstName" not-null="true" type="string"/>
+        <property column="LASTNAME" length="255" name="lastName" not-null="true" type="string"/>
+        <property column="MOBILENUMBER" length="255" name="mobileNumber" not-null="true" type="string"/>
+        <property column="EMAIL" length="255" name="email" not-null="true" type="string"/>
+        <set name="auta" inverse="true">
+        <key column="MAJITEL_ID"/>
+        <one-to-many class="hibernate.Auto"/>
+    </set>
+    </class>
+</hibernate-mapping>

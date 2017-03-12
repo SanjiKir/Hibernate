@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="hibernate.Pojisteni" table="POJISTENI">
+    <id column="POJISTENI_ID" name="pojisteniId" type="long">
+      <generator class="native"/>
+    </id>
+    <property column="NAZEV_POJISTENI" length="255" name="nazevPojisteni" not-null="true" type="string" unique="true" update="true"/>
+    <property column="TYP_POJISTENI" length="255" name="typPojisteni" not-null="true" type="string" unique="true" update="false"/>
+  </class>
+</hibernate-mapping>

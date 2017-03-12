@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+            <property name="hibernate.connection.driver_class">
+			org.gjt.mm.mysql.Driver</property>
+        <property name="hibernate.connection.url">
+			jdbc:mysql://4it353.vse.cz/shak01</property>
+        <property name="hibernate.connection.username">shak01</property>
+        <property name="hibernate.connection.password">shak01</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+                
+        <property name="hibernate.hbm2ddl.auto">create</property>
+        <property name="hibernate.show_sql">true</property>
+        
+        <!--  mapping files  -->    
+        
+        <mapping resource="model/Majitel.hbm.xml" /> 
+       
+    </session-factory>
+</hibernate-configuration>
